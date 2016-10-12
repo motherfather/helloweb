@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,11 +26,17 @@
 		<br/>
 		생년 :
 		<select name="birth-year">
-			<option value="2000">2000년</option>
-			<option	value="2001">2001년</option>
-			<option value="2002">2002년</option>
-			<option value="2003">2003년</option>
-			<option value="2004">2004년</option>
+		<%
+				SimpleDateFormat year = new SimpleDateFormat("yyyy");
+				Date date = new Date();
+				int listYear = Integer.parseInt(year.format(date));
+				
+				for (int i = 0; i < 10; i++) {
+		%>
+			<option value="<%=listYear - i %> "><%=listYear - i %>년</option>
+		<%
+			}
+		%>
 		</select>
 		월 :
 		<select name="birth-month">
