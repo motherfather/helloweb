@@ -50,6 +50,17 @@
 		</select>
 		<br/>
 		<br/>
+		취미 :
+		<input type="checkbox" name="hobby" value="sleeping"/>잠자기
+		<input type="checkbox" name="hobby" value="reading"/>독서
+		<input type="checkbox" name="hobby" value="swimming"/>수영
+		<input type="checkbox" name="hobby" value="eating"/>먹기
+		<br/>
+		<br/>
+		자기소개 :
+		<textarea style="width:300px; height:200px" name=""></textarea>
+		<br/>
+		<br/>
 		<input type="submit" value="회원가입"/>
 	</form>
 </body>

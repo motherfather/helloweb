@@ -21,12 +21,24 @@ public class JoinServlet extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String birthYear = request.getParameter("birth-year");
 		String birthMonth = request.getParameter("birth-month");
+		String[] hobbies = request.getParameterValues("hobby");
+		String selfIntro = request.getParameter("self-intro");
+		
 		System.out.println(email);
 		System.out.println(password);
 		System.out.println(name);
 		System.out.println(gender);
 		System.out.println(birthYear);
 		System.out.println(birthMonth);
+		if (hobbies != null) {
+//			for (int i = 0; i < hobbies.length; i++) {
+//				System.out.println(hobbies[i]);
+//			}
+			for (String hobby : hobbies) {
+				System.out.println(hobby);
+			}
+		}
+		System.out.println(selfIntro);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
